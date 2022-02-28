@@ -9,7 +9,7 @@ import { ERC20MetadataStorage } from '@solidstate/contracts/token/ERC20/metadata
 contract MyToken is ERC20 {
     using ERC20MetadataStorage for ERC20MetadataStorage.Layout;
 
-    function initialize(string calldata name, string calldata symbol, uint8 decimals, uint256 totalSupply) public {
+    function init(string calldata name, string calldata symbol, uint8 decimals, uint256 totalSupply) public {
         ERC20MetadataStorage.Layout storage l = ERC20MetadataStorage.layout();
 
         l.setName(name);

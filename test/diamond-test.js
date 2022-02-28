@@ -47,7 +47,7 @@ describe('MyToken', function () {
       it('can call functions through diamond address', async function() {
 
         //initialize MyToken's storage
-        await instance.initialize("MyToken", "MTN", 18, 100);
+        await instance.init("MyToken", "MTN", 18, 100);
         
         //get the total supply (or anything in erc20metadatastorage struct)
         const totalSupply = await instance.totalSupply();
